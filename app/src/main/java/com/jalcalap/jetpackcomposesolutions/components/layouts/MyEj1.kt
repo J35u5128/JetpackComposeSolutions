@@ -15,40 +15,48 @@ import androidx.compose.ui.graphics.Color
 @Composable
 fun MyEj1(modifier: Modifier) {
     Column() {
-        Box(modifier = Modifier
-            .weight(1f)
-            .fillMaxWidth()
-            .background(Color.Cyan),
-            contentAlignment = Alignment.Center) {
+        Box(
+            modifier = Modifier
+                .weight(1f)
+                .fillMaxWidth()
+                .background(Color.Cyan),
+            contentAlignment = Alignment.Center
+        ) {
             Text("Ejemplo 1")
         }
-        Box(modifier = Modifier
-            .weight(1f)
-            .fillMaxWidth()
-            .background(Color.Green)) {
+        Box(
+            modifier = Modifier
+                .weight(1f)
+                .fillMaxWidth()
+        ) {
             Row() {
-                Box(modifier = Modifier
-                    .weight(1f)
-                    .fillMaxHeight()
-                    .background(Color.Red),
-                    contentAlignment = Alignment.Center) {
+                Box(
+                    modifier = Modifier
+                        .weight(1f)
+                        .fillMaxHeight()
+                        .background(Color.Red),
+                    contentAlignment = Alignment.Center
+                ) {
                     Text("Ejemplo 2")
                 }
-                Box(modifier = Modifier
-                    .weight(1f)
-                    .fillMaxHeight()
-                    .background(Color.Green),
+                Box(
+                    modifier = Modifier
+                        .weight(1f)
+                        .fillMaxHeight()
+                        .background(Color.Green),
                     contentAlignment = Alignment.Center
                 ) {
                     Text("Ejemplo 3")
                 }
             }
         }
-        Box(modifier = Modifier
-            .weight(1f)
-            .fillMaxWidth()
-            .background(Color.Magenta),
-            contentAlignment = Alignment.Center)
+        Box(
+            modifier = Modifier
+                .weight(1f)
+                .fillMaxWidth()
+                .background(Color.Magenta),
+            contentAlignment = Alignment.Center
+        )
         {
             Text("Ejemplo 4")
         }
