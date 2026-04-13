@@ -9,18 +9,33 @@ sus conocimientos con ejemplos resueltos y explicados.
 ---
 
 ## 🗂️ Estructura del repositorio
-Cada carpeta representa una parte específica del proyecto de Jetpack Compose, organizada por componentes reutilizables, tema visual y actividad principal.
 
-📦 com.jalcalap.jetpackcomposesolutions
-┣ 📁 components.layouts/
-┣ 📁 ui.theme/
-┗ 📄 MainActivity.kt
+Cada carpeta agrupa ejercicios o pantallas relacionadas con un concepto concreto de Jetpack Compose, organizadas por componentes de layout, pantalla de login y configuración del tema.
 
-components.layouts/ → Contiene los componentes y ejercicios de layouts, como MyEj1.kt.
+📦 `com.jalcalap.jetpackcomposesolutions`  
+┣ 📁 `components/`  
+┃ ┗ 📁 `layouts/`  
+┃ &nbsp;&nbsp;┣ 📄 `MyBasicConstraintLayout.kt`  
+┃ &nbsp;&nbsp;┣ 📄 `MyBox.kt`  
+┃ &nbsp;&nbsp;┣ 📄 `MyColumn.kt`  
+┃ &nbsp;&nbsp;┣ 📄 `MyComplexLayout.kt`  
+┃ &nbsp;&nbsp;┣ 📄 `MyEj1.kt`  
+┃ &nbsp;&nbsp;┣ 📄 `MyEj2.kt`  
+┃ &nbsp;&nbsp;┗ 📄 `MyRow.kt`  
+┃ ┗ 📄 `Text.kt`  
+┣ 📁 `login/`  
+┃ ┗ 📄 `LoginScreen.kt`  
+┣ 📁 `ui.theme/`  
+┃ ┣ 📄 `Color.kt`  
+┃ ┣ 📄 `Theme.kt`  
+┃ ┗ 📄 `Type.kt`  
+┗ 📄 `MainActivity.kt`  
 
-ui.theme/ → Agrupa la configuración visual del proyecto: colores, tipografías y tema general.
-
-MainActivity.kt → Punto de entrada de la aplicación, donde se carga la interfaz principal (y cada ejercicio contenido en components.layouts).
+- **components/layouts/** → Contiene ejemplos y ejercicios de layouts en Jetpack Compose, incluyendo `Box`, `Column`, `Row`, `ConstraintLayout` y composables personalizados.
+- **components/Text.kt** → Incluye un ejemplo adicional relacionado con textos o componentes básicos.
+- **login/** → Prueba de comportamiento de diversos Composables, no es un login real, **aún**.
+- **ui.theme/** → Centraliza la configuración visual del proyecto: colores, tipografía y tema general.
+- **MainActivity.kt** → Punto de entrada de la aplicación, desde donde se carga la interfaz principal (y cada ejercicio contenido en \components, \login y futuros directorios con más ejemplos y ejercicios).
 ---
 
 ## 🚀 Cómo usar este repositorio
