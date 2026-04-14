@@ -42,7 +42,7 @@ Cada carpeta agrupa ejercicios o pantallas relacionadas con un concepto concreto
 
 1. Clona el proyecto:
    ```bash
-   git clone https://github.com/tu-usuario/jetpack-compose-ejercicios.git
+   git clone https://github.com/tu-usuario/JetpackComposeSolutions.git
    ```
 2. Abre la carpeta en **Android Studio (Flamingo o superior)**.  
 3. Ejecuta los ejemplos en el emulador o en un dispositivo físico (dependiendo de la potencia de tu equipo es preferible hacerlo en un dispositivo físico).  
