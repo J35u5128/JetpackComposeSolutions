@@ -10,19 +10,27 @@ sus conocimientos con ejemplos resueltos y explicados.
 
 ## 🗂️ Estructura del repositorio
 
-Cada carpeta agrupa ejercicios o pantallas relacionadas con un concepto concreto de Jetpack Compose, organizadas por componentes de layout, pantalla de login y configuración del tema.
+Cada carpeta agrupa ejercicios o pantallas relacionadas con un concepto concreto de Jetpack Compose, organizadas por componentes de layout, estado, pantalla de login y configuración del tema.
 
 📦 `com.jalcalap.jetpackcomposesolutions`  
 ┣ 📁 `components/`  
-┃ ┗ 📁 `layouts/`  
-┃ &nbsp;&nbsp;┣ 📄 `MyBasicConstraintLayout.kt`  
-┃ &nbsp;&nbsp;┣ 📄 `MyBox.kt`  
-┃ &nbsp;&nbsp;┣ 📄 `MyColumn.kt`  
-┃ &nbsp;&nbsp;┣ 📄 `MyComplexLayout.kt`  
-┃ &nbsp;&nbsp;┣ 📄 `MyEj1.kt`  
-┃ &nbsp;&nbsp;┣ 📄 `MyEj2.kt`  
-┃ &nbsp;&nbsp;┗ 📄 `MyRow.kt`  
-┃ ┗ 📄 `Text.kt`  
+┃ ┣ 📁 `layouts/`  
+┃ ┃ ┣ 📄 `Image.kt`  
+┃ ┃ ┣ 📄 `MyBasicConstraintLayout.kt`  
+┃ ┃ ┣ 📄 `MyBox.kt`  
+┃ ┃ ┣ 📄 `MyColumn.kt`  
+┃ ┃ ┣ 📄 `MyComplexLayout.kt`  
+┃ ┃ ┣ 📄 `MyEj1.kt`  
+┃ ┃ ┣ 📄 `MyEj2.kt`  
+┃ ┃ ┗ 📄 `MyRow.kt`  
+┃ ┣ 📁 `state/`  
+┃ ┃ ┣ 📄 `CheckBoxState`  
+┃ ┃ ┣ 📄 `Buttons.kt`  
+┃ ┃ ┣ 📄 `Progress.kt`  
+┃ ┃ ┣ 📄 `Sliders.kt`  
+┃ ┃ ┣ 📄 `Text.kt`  
+┃ ┃ ┣ 📄 `TextField.kt`  
+┃ ┃ ┗ 📄 `ToggleControl.kt`  
 ┣ 📁 `login/`  
 ┃ ┗ 📄 `LoginScreen.kt`  
 ┣ 📁 `ui.theme/`  
@@ -32,10 +40,12 @@ Cada carpeta agrupa ejercicios o pantallas relacionadas con un concepto concreto
 ┗ 📄 `MainActivity.kt`  
 
 - **components/layouts/** → Contiene ejemplos y ejercicios de layouts en Jetpack Compose, incluyendo `Box`, `Column`, `Row`, `ConstraintLayout` y composables personalizados.
-- **components/Text.kt** → Incluye un ejemplo adicional relacionado con textos o componentes básicos.
-- **login/** → Prueba de comportamiento de diversos Composables, no es un login real, **aún**.
+- **components/state/** → Contiene una data class utilizada en ToggleControl.kt para manejar los textos de las checkboxes.
+- **components/layouts/Image.kt** → Incluye un ejemplo adicional relacionado con imágenes o recursos visuales.
+- **login/** → Prueba de comportamiento de diversos composables, no es un login real, **aún**.
 - **ui.theme/** → Centraliza la configuración visual del proyecto: colores, tipografía y tema general.
-- **MainActivity.kt** → Punto de entrada de la aplicación, desde donde se carga la interfaz principal (y cada ejercicio contenido en \components, \login y futuros directorios con más ejemplos y ejercicios).
+- **MainActivity.kt** → Punto de entrada de la aplicación, desde donde se carga la interfaz principal y cada ejercicio contenido en `components`, `login` y futuros directorios con más ejemplos y ejercicios.
+  
 ---
 
 ## 🚀 Cómo usar este repositorio
