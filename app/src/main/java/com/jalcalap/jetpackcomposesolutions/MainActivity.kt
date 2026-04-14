@@ -21,7 +21,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             JetpackComposeSolutionsTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    MyTexts(Modifier.padding(innerPadding))
+                    MyTextFieldParent(Modifier.padding(innerPadding))
                 }
             }
         }
