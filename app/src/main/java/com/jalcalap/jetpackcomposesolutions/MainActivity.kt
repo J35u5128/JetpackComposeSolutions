@@ -21,7 +21,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             JetpackComposeSolutionsTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    MyButtons(Modifier.padding(innerPadding))
+                    ProgressAnimation(Modifier.padding(innerPadding))
                 }
             }
         }
