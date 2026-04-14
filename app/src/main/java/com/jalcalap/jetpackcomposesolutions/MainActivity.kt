@@ -21,7 +21,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             JetpackComposeSolutionsTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    MyRadioButtonList(Modifier.padding(innerPadding))
+                    MyRangeSlider(Modifier.padding(innerPadding))
                 }
             }
         }
