@@ -9,6 +9,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.FabPosition
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -33,7 +34,7 @@ class MainActivity : ComponentActivity() {
             JetpackComposeSolutionsTheme {
                 val snackbarHostState = remember { SnackbarHostState() }
                 val scope = rememberCoroutineScope()
-                Scaffold(modifier = Modifier.fillMaxSize(), topBar = {MyTopAppBar()}, snackbarHost = { SnackbarHost(hostState = snackbarHostState) }) { innerPadding ->
+                Scaffold(modifier = Modifier.fillMaxSize(), topBar = {MyTopAppBar()}, snackbarHost = { SnackbarHost(hostState = snackbarHostState) }, floatingActionButton = {MyFAB()}, floatingActionButtonPosition = FabPosition.Start) { innerPadding ->
                     Box(
                         modifier = Modifier
                             .fillMaxSize()
