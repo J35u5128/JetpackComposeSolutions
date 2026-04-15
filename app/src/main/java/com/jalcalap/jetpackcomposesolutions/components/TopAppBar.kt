@@ -1,5 +1,6 @@
 package com.jalcalap.jetpackcomposesolutions.components
 
+import androidx.compose.foundation.clickable
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
@@ -13,13 +14,14 @@ import com.jalcalap.jetpackcomposesolutions.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MyTopAppBar(modifier: Modifier = Modifier) {
+fun MyTopAppBar(modifier: Modifier = Modifier, onNavSelected:() -> Unit) {
     TopAppBar(
         title = { Text("My app") },
         navigationIcon = {
             Icon(
                 painterResource(R.drawable.ic_launcher_foreground),
-                contentDescription = null
+                contentDescription = null,
+                modifier = Modifier.clickable{onNavSelected()}
             )
         },
         actions = {
