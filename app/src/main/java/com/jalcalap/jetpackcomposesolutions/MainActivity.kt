@@ -34,7 +34,7 @@ class MainActivity : ComponentActivity() {
             JetpackComposeSolutionsTheme {
                 val snackbarHostState = remember { SnackbarHostState() }
                 val scope = rememberCoroutineScope()
-                Scaffold(modifier = Modifier.fillMaxSize(), topBar = {MyTopAppBar()}, snackbarHost = { SnackbarHost(hostState = snackbarHostState) }, floatingActionButton = {MyFAB()}, floatingActionButtonPosition = FabPosition.Start) { innerPadding ->
+                Scaffold(modifier = Modifier.fillMaxSize(), topBar = {MyTopAppBar()}, snackbarHost = { SnackbarHost(hostState = snackbarHostState) }, floatingActionButton = {MyFAB()}, floatingActionButtonPosition = FabPosition.Start, bottomBar = {MyNavigationBar()}) { innerPadding ->
                     Box(
                         modifier = Modifier
                             .fillMaxSize()
