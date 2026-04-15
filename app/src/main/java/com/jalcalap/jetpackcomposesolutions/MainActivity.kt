@@ -21,7 +21,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             JetpackComposeSolutionsTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    MyRangeSlider(Modifier.padding(innerPadding))
+                    MyExposedDropDownMenu(Modifier.padding(innerPadding))
                 }
             }
         }
