@@ -35,6 +35,7 @@ import com.jalcalap.jetpackcomposesolutions.components.MyModalDrawer
 import com.jalcalap.jetpackcomposesolutions.components.MyNavigationBar
 import com.jalcalap.jetpackcomposesolutions.components.MyOutlinedCard
 import com.jalcalap.jetpackcomposesolutions.components.MyTopAppBar
+import com.jalcalap.jetpackcomposesolutions.components.ScrollList
 import com.jalcalap.jetpackcomposesolutions.components.advance.InteractionSourceExample
 import com.jalcalap.jetpackcomposesolutions.components.advance.MyDerivedStateOf
 import com.jalcalap.jetpackcomposesolutions.components.advance.MyLaunchedEffect
@@ -90,7 +91,7 @@ class MainActivity : ComponentActivity() {
                             //InteractionSourceExample(modifier = Modifier.padding((innerPadding)))
                             //MyLaunchedEffect() { }
                             //MyDerivedStateOf()
-                            MyAdvanceList()
+                            ScrollList()
                         }
                     }
                 }
