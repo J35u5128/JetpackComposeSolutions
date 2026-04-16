@@ -27,12 +27,16 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
+import com.jalcalap.jetpackcomposesolutions.components.MyAdvanceList
+import com.jalcalap.jetpackcomposesolutions.components.MyBasicList
 import com.jalcalap.jetpackcomposesolutions.components.MyCustomDialog
 import com.jalcalap.jetpackcomposesolutions.components.MyFAB
+import com.jalcalap.jetpackcomposesolutions.components.MyGridList
 import com.jalcalap.jetpackcomposesolutions.components.MyModalDrawer
 import com.jalcalap.jetpackcomposesolutions.components.MyNavigationBar
 import com.jalcalap.jetpackcomposesolutions.components.MyOutlinedCard
 import com.jalcalap.jetpackcomposesolutions.components.MyTopAppBar
+import com.jalcalap.jetpackcomposesolutions.components.ScrollList
 import com.jalcalap.jetpackcomposesolutions.components.advance.InteractionSourceExample
 import com.jalcalap.jetpackcomposesolutions.components.advance.MyDerivedStateOf
 import com.jalcalap.jetpackcomposesolutions.components.advance.MyLaunchedEffect
@@ -87,7 +91,8 @@ class MainActivity : ComponentActivity() {
                             }})
                             //InteractionSourceExample(modifier = Modifier.padding((innerPadding)))
                             //MyLaunchedEffect() { }
-                            MyDerivedStateOf()
+                            //MyDerivedStateOf()
+                            MyGridList()
                         }
                     }
                 }
