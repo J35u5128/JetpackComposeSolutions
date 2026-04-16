@@ -34,6 +34,7 @@ import com.jalcalap.jetpackcomposesolutions.components.MyNavigationBar
 import com.jalcalap.jetpackcomposesolutions.components.MyOutlinedCard
 import com.jalcalap.jetpackcomposesolutions.components.MyTopAppBar
 import com.jalcalap.jetpackcomposesolutions.components.advance.InteractionSourceExample
+import com.jalcalap.jetpackcomposesolutions.components.advance.MyLaunchedEffect
 import com.jalcalap.jetpackcomposesolutions.components.model.PokemonCombat
 import com.jalcalap.jetpackcomposesolutions.ui.theme.JetpackComposeSolutionsTheme
 import kotlinx.coroutines.launch
@@ -83,7 +84,8 @@ class MainActivity : ComponentActivity() {
                                     //nada
                                 }
                             }})
-                            InteractionSourceExample(modifier = Modifier.padding((innerPadding)))
+                            //InteractionSourceExample(modifier = Modifier.padding((innerPadding)))
+                            MyLaunchedEffect() { }
                         }
                     }
                 }
