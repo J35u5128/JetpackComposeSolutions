@@ -43,7 +43,7 @@ fun MyNavigationBar(modifier: Modifier = Modifier) {
 fun RowScope.NTTData(navItem: NavItem, isSelected: Boolean, onItemClick: () -> Unit) {
     NavigationBarItem(
         selected = isSelected,
-        onClick = {onItemClick},
+        onClick = {onItemClick()},
         icon = {
             Icon(
                 painter = navItem.icon,
