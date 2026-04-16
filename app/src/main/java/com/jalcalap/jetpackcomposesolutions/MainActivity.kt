@@ -7,20 +7,29 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.DrawerValue
+import androidx.compose.material3.FabPosition
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.jalcalap.jetpackcomposesolutions.components.MyCard
+import com.jalcalap.jetpackcomposesolutions.components.MyCustomDialog
+import com.jalcalap.jetpackcomposesolutions.components.MyFAB
 import com.jalcalap.jetpackcomposesolutions.components.MyModalDrawer
+import com.jalcalap.jetpackcomposesolutions.components.MyNavigationBar
 import com.jalcalap.jetpackcomposesolutions.components.MyOutlinedCard
-import com.jalcalap.jetpackcomposesolutions.components.MyTimePicker
+import com.jalcalap.jetpackcomposesolutions.components.MyTopAppBar
+import com.jalcalap.jetpackcomposesolutions.components.model.PokemonCombat
 import com.jalcalap.jetpackcomposesolutions.ui.theme.JetpackComposeSolutionsTheme
+import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,9 +38,27 @@ class MainActivity : ComponentActivity() {
         setContent {
             JetpackComposeSolutionsTheme {
                 val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
-                MyTimePicker()
+                val snackbarHostState = remember { SnackbarHostState() }
+                val scope = rememberCoroutineScope()
+                var showDialog by remember { mutableStateOf(false) }
+                val pokemonCombat = PokemonCombat(pokemonA = "Pikachu", pokemonB = "Gengar")
+                MyCustomDialog(
+                    showDialog = showDialog,
+                    pokemonCombat = pokemonCombat,
+                    onStartCombat = {
+                        //Iniciar el combate
+                        showDialog = false
+                    },
+                    onDismissDialog = { showDialog = false })
                 MyModalDrawer(drawerState) {
-                    Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                    Scaffold(
+                        modifier = Modifier.fillMaxSize(),
+                        topBar = { MyTopAppBar { scope.launch { drawerState.open() } } },
+                        snackbarHost = { SnackbarHost(hostState = snackbarHostState) },
+                        floatingActionButton = { MyFAB { showDialog = true } },
+                        floatingActionButtonPosition = FabPosition.Center,
+                        bottomBar = { MyNavigationBar() }
+                    ) { innerPadding ->
                         MyOutlinedCard(Modifier.padding(innerPadding))
                     }
                 }
