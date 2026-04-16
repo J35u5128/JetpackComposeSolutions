@@ -19,6 +19,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.jalcalap.jetpackcomposesolutions.components.MyCard
 import com.jalcalap.jetpackcomposesolutions.components.MyModalDrawer
 import com.jalcalap.jetpackcomposesolutions.components.MyOutlinedCard
+import com.jalcalap.jetpackcomposesolutions.components.MyTimePicker
 import com.jalcalap.jetpackcomposesolutions.ui.theme.JetpackComposeSolutionsTheme
 
 class MainActivity : ComponentActivity() {
@@ -28,9 +29,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             JetpackComposeSolutionsTheme {
                 val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
-                remember { SnackbarHostState() }
-                rememberCoroutineScope()
-
+                MyTimePicker()
                 MyModalDrawer(drawerState) {
                     Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                         MyOutlinedCard(Modifier.padding(innerPadding))
