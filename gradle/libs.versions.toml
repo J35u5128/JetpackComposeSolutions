@@ -1,5 +1,5 @@
 [versions]
-agp = "9.1.0"
+agp = "9.1.1"
 coilCompose = "3.4.0"
 coreKtx = "1.18.0"
 junit = "4.13.2"
@@ -12,6 +12,8 @@ composeBom = "2026.02.01"
 constraint-version = "1.1.0"
 lottie = "6.7.1"
 lottieCompose = "6.7.1"
+navigationCompose = "2.9.0"
+kotlinSerialization = "1.8.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -32,9 +34,12 @@ androidx-compose-material3 = { group = "androidx.compose.material3", name = "mat
 constraint-layout = {module = "androidx.constraintlayout:constraintlayout-compose", version.ref = "constraint-version"}
 lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie" }
 lottie-compose = { module = "com.airbnb.android:lottie-compose", version.ref = "lottieCompose" }
+androidx-navigation-compose = {module="androidx.navigation:navigation-compose", version.ref="navigationCompose"}
+kotlinx-serialization-json = {module="org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref="kotlinSerialization"}
 
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+jetbrainsKotlinSerialization = {id="org.jetbrains.kotlin.plugin.serialization", version.ref="kotlin"}
 
