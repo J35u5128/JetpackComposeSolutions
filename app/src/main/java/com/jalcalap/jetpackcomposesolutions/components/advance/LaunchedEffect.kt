@@ -14,7 +14,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.delay
-import kotlinx.coroutines.time.delay
 
 @Composable
 fun MyLaunchedEffect(modifier: Modifier = Modifier, onFinished: () -> Unit) {
