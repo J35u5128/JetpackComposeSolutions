@@ -31,6 +31,7 @@ import com.jalcalap.jetpackcomposesolutions.components.MyAdvanceList
 import com.jalcalap.jetpackcomposesolutions.components.MyBasicList
 import com.jalcalap.jetpackcomposesolutions.components.MyCustomDialog
 import com.jalcalap.jetpackcomposesolutions.components.MyFAB
+import com.jalcalap.jetpackcomposesolutions.components.MyGridList
 import com.jalcalap.jetpackcomposesolutions.components.MyModalDrawer
 import com.jalcalap.jetpackcomposesolutions.components.MyNavigationBar
 import com.jalcalap.jetpackcomposesolutions.components.MyOutlinedCard
@@ -91,7 +92,7 @@ class MainActivity : ComponentActivity() {
                             //InteractionSourceExample(modifier = Modifier.padding((innerPadding)))
                             //MyLaunchedEffect() { }
                             //MyDerivedStateOf()
-                            ScrollList()
+                            MyGridList()
                         }
                     }
                 }
