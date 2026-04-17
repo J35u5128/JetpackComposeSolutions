@@ -6,3 +6,5 @@ import kotlinx.serialization.Serializable
 object Login
 @Serializable
 object Home
+@Serializable
+data class Detail(val id: String, val test: Boolean)
