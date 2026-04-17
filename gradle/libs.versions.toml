@@ -14,6 +14,7 @@ lottie = "6.7.1"
 lottieCompose = "6.7.1"
 navigationCompose = "2.9.0"
 kotlinSerialization = "1.8.1"
+kotlinParcelize = "2.1.21"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -42,4 +43,4 @@ kotlinx-serialization-json = {module="org.jetbrains.kotlinx:kotlinx-serializatio
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 jetbrainsKotlinSerialization = {id="org.jetbrains.kotlin.plugin.serialization", version.ref="kotlin"}
-
+kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlinParcelize" }
