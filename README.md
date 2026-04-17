@@ -9,10 +9,14 @@ sus conocimientos con ejemplos resueltos y explicados.
 ---
 ## 🗂️ Estructura del repositorio
 
-Cada carpeta agrupa ejercicios o pantallas relacionadas con un concepto concreto de Jetpack Compose, organizadas por componentes de layout, estado, pantalla de login y configuración del tema.
+Cada carpeta agrupa ejercicios o pantallas relacionadas con un concepto concreto de Jetpack Compose, organizadas por componentes de layout, estado, navegación, login y configuración del tema.
 
 📦 `com.jalcalap.jetpackcomposesolutions`  
 ┣ 📁 `components/`  
+┃ ┣ 📁 `advance/`  
+┃ ┃ ┣ 📄 `DerivedState.kt`  
+┃ ┃ ┣ 📄 `LaunchedEffect.kt`  
+┃ ┃ ┗ 📄 `MyInteractionSource.kt`  
 ┃ ┣ 📁 `layouts/`  
 ┃ ┃ ┣ 📄 `Image.kt`  
 ┃ ┃ ┣ 📄 `MyBasicConstraintLayout.kt`  
@@ -24,22 +28,29 @@ Cada carpeta agrupa ejercicios o pantallas relacionadas con un concepto concreto
 ┃ ┃ ┗ 📄 `MyRow.kt`  
 ┃ ┣ 📁 `model/`  
 ┃ ┃ ┣ 📄 `DrawerItem`  
-┃ ┃ ┗ 📄 `NavItem`  
+┃ ┃ ┣ 📄 `NavItem`  
+┃ ┃ ┗ 📄 `PokemonCombat`  
+┃ ┣ 📁 `navigation/`  
+┃ ┃ ┣ 📁 `examples/`  
+┃ ┃ ┃ ┣ 📄 `HomeScreen.kt`  
+┃ ┃ ┃ ┗ 📄 `LoginScreen.kt`  
+┃ ┃ ┣ 📄 `NavigationWrapper.kt`  
+┃ ┃ ┗ 📄 `Screen.kt`  
 ┃ ┣ 📁 `state/`  
-┃ ┃ ┣ 📄 `CheckBoxState`  
-┃ ┃ ┣ 📄 `Badges.kt`  
-┃ ┃ ┣ 📄 `Buttons.kt`  
-┃ ┃ ┣ 📄 `Cards.kt`  
-┃ ┃ ┣ 📄 `Divider.kt`  
-┃ ┃ ┣ 📄 `DropDowns.kt`  
-┃ ┃ ┣ 📄 `ModallDrawer.kt`  
-┃ ┃ ┣ 📄 `NavigationBar.kt`  
-┃ ┃ ┣ 📄 `Progress.kt`  
-┃ ┃ ┣ 📄 `Sliders.kt`  
-┃ ┃ ┣ 📄 `Text.kt`  
-┃ ┃ ┣ 📄 `TextField.kt`  
-┃ ┃ ┣ 📄 `ToggleControl.kt`  
-┃ ┃ ┗ 📄 `TopAppBar.kt`  
+┃ ┃ ┗ 📄 `CheckBoxState`  
+┃ ┣ 📄 `Badges.kt`  
+┃ ┣ 📄 `Buttons.kt`  
+┃ ┣ 📄 `Cards.kt`  
+┃ ┣ 📄 `Divider.kt`  
+┃ ┣ 📄 `DropDowns.kt`  
+┃ ┣ 📄 `ModallDrawer.kt`  
+┃ ┣ 📄 `NavigationBar.kt`  
+┃ ┣ 📄 `Progress.kt`  
+┃ ┣ 📄 `Sliders.kt`  
+┃ ┣ 📄 `Text.kt`  
+┃ ┣ 📄 `TextField.kt`  
+┃ ┣ 📄 `ToggleControl.kt`  
+┃ ┗ 📄 `TopAppBar.kt`  
 ┣ 📁 `login/`  
 ┃ ┗ 📄 `LoginScreen.kt`  
 ┣ 📁 `ui.theme/`  
@@ -48,10 +59,13 @@ Cada carpeta agrupa ejercicios o pantallas relacionadas con un concepto concreto
 ┃ ┗ 📄 `Type.kt`  
 ┗ 📄 `MainActivity.kt`  
 
+- **components/** → Reúne composables de UI reutilizables como botones, tarjetas, divisores, barras de progreso, sliders, textos, campos de texto, switches, navegación superior y otros controles.
+- **components/advance/** → Contiene ejemplos avanzados de estado y efectos en Jetpack Compose, como `DerivedState`, `LaunchedEffect` e interacciones personalizadas.
 - **components/layouts/** → Contiene ejemplos y ejercicios de layouts en Jetpack Compose, incluyendo `Box`, `Column`, `Row`, `ConstraintLayout` y composables personalizados.
-- **components/state/** → Contiene estados y componentes relacionados con controles, textos, botones, barras de progreso, sliders, switches y otros elementos de interfaz.
 - **components/model/** → Contiene modelos de datos utilizados por algunos componentes del proyecto.
-- **components/layouts/Image.kt** → Incluye un ejemplo adicional relacionado con imágenes o recursos visuales.
+- **components/navigation/** → Agrupa ejemplos de navegación y pantallas relacionadas con el flujo de la app.
+- **components/navigation/examples/** → Incluye pantallas de ejemplo como `HomeScreen` y `LoginScreen`.
+- **components/state/** → Contiene un estado reutilizable para controles de selección, actualmente `CheckBoxState`.
 - **login/** → Prueba de comportamiento de diversos composables, no es un login real, **aún**.
 - **ui.theme/** → Centraliza la configuración visual del proyecto: colores, tipografía y tema general.
 - **MainActivity.kt** → Punto de entrada de la aplicación, desde donde se carga la interfaz principal y cada ejercicio contenido en `components`, `login` y futuros directorios con más ejemplos y ejercicios.
